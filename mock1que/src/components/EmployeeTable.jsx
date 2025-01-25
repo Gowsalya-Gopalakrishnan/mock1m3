@@ -22,19 +22,20 @@ const EmployeeTable = () => {
       {data.length  && data.map((ele)=>{
         return(
             <>
+            <div className='overall'>
             <div key={ele.id} className='table'>
             <h2>Name : {ele.name}</h2>
             <p>Designation : {ele.designation}</p>
             <p>Department : {ele.department}</p>
             <button>Delete</button>
-            <button onClick={<AddEmployeeForm/>}>
+            </div>
+            <button onClick={<AddEmployeeForm/>} className='addbtn'>
             {
                 addEmployee ? "Close Add Employee Form":"Add Employee"
             }
             </button>
-
-        </div>
-
+            <button className='filterbtn'>Filter Employees by Department</button>
+            </div>
             </>
             
         )
