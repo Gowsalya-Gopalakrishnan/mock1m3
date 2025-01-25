@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import AddEmployeeForm from './AddEmployeeForm';
+import FilterDropdown from './FilterDropdown';
 
 const EmployeeTable = () => {
     const[data,setData] = useState([]);
@@ -34,7 +35,7 @@ const EmployeeTable = () => {
                 addEmployee ? "Close Add Employee Form":"Add Employee"
             }
             </button>
-            <button className='filterbtn'>Filter Employees by Department</button>
+            <button className='filterbtn' onClick={<FilterDropdown/>}>Filter Employees by Department</button>
             </div>
             </>
             
